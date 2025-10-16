@@ -1,4 +1,4 @@
-Developer log
+# Developer log
 
 Day 1:
   Started index and style files. Mostly spent learning html and css.
