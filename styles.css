@@ -1,44 +1,53 @@
 /* create flexbox for the skills section */
-.skills{
-    background-color: rgb(41, 41, 41);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start; /* aligns content to top right making list going down*/
-    align-items: flex-start;
-    height: 250px; /* temporary values */
-    width: 250px;
-    margin-left: 400px;
-    
+html, body {
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
 }
+
+.checklist{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 2fr 1fr;
+    grid-template-rows: repeat(6, auto);
+    grid-template-areas:
+    "blank top1 header top2 blank"
+    "blank miniHeaderLeft blank miniHeaderRight blank"
+    "blank checklistLeft blank checklistRight blank";
+    min-height: 100vh;
+}
+.skillsSection{
+    background-color: rgb(41, 41, 41);
+    display: grid;
+    grid-area: miniHeaderLeft;
+    grid-column: 2 / 3;
+
+    height: 100%;
+    width: 100%;
+}
+
 /* seperate section for just the wording and links to make them have only underline and wtv color I want*/
 .skills a{
     color: white;
     text-decoration: underline;
     font-size: 24px;
+    display: grid;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
 }
-.skills label{
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-.skillsSection{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-left: 50px;
-}
+
+
 .title {
     color: purple;
     text-align: center;
     font-size: 48px;
     height: 10vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  
 }
 .miniTitle {
     font-size: 36px;
-    margin-left: 480px;
+
 }
 img {
     background-color: black;
